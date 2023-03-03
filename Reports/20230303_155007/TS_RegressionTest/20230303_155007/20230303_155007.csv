@@ -1,0 +1,50 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_RegressionTest,Chrome 110.0.0.0,,,2023-03-03 15:51:09,2023-03-03 15:51:40,31.169s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC1_Verify Successful Login,Chrome 110.0.0.0,"Verify if users can login successful. 
+
+Steps:
+- Click on 'Book Appointment' button to login
+- Input username and password
+- Click on 'Login' button
+
+Expected result:
+'Appointment' section is displayed after successful login",,2023-03-03 15:51:09,2023-03-03 15:51:21,12.443s,PASSED
+Start listener action : enableSauceLabs,Chrome 110.0.0.0,,,2023-03-03 15:51:09,2023-03-03 15:51:09,0.015s,PASSED
+"comment(""Story: Login to CURA system"")",Chrome 110.0.0.0,,,2023-03-03 15:51:09,2023-03-03 15:51:09,0.051s,PASSED
+"comment(""Given that the user has the valid login information"")",Chrome 110.0.0.0,,,2023-03-03 15:51:09,2023-03-03 15:51:09,0.004s,PASSED
+openBrowser(G_SiteURL),Chrome 110.0.0.0,,,2023-03-03 15:51:09,2023-03-03 15:51:16,7.170s,PASSED
+"click(findTestObject(""Page_CuraHomepage/btn_MakeAppointment""))",Chrome 110.0.0.0,,,2023-03-03 15:51:16,2023-03-03 15:51:17,1.024s,PASSED
+"setText(findTestObject(""Page_Login/txt_UserName""), Username)",Chrome 110.0.0.0,,,2023-03-03 15:51:17,2023-03-03 15:51:18,0.997s,PASSED
+"setText(findTestObject(""Page_Login/txt_Password""), Password)",Chrome 110.0.0.0,,,2023-03-03 15:51:18,2023-03-03 15:51:19,1.018s,PASSED
+"comment(""When he logins to CURA system"")",Chrome 110.0.0.0,,,2023-03-03 15:51:19,2023-03-03 15:51:19,0.021s,PASSED
+"click(findTestObject(""Page_Login/btn_Login""))",Chrome 110.0.0.0,,,2023-03-03 15:51:19,2023-03-03 15:51:21,1.283s,PASSED
+"comment(""Then he should be able to login successfully"")",Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:21,0.020s,PASSED
+"landingPage = verifyElementPresent(findTestObject(""Page_CuraAppointment/div_Appointment""), G_Timeout)",Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:21,0.294s,PASSED
+closeBrowser(),Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:21,0.155s,PASSED
+Start listener action : autoUpdateJobStatus,Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:21,0.001s,PASSED
+,,,,,,,
+Test Cases/Main Test Cases/TC2_Verify Successful Appointment,Chrome 110.0.0.0,"Verify if users can book an appointment sucessfully.
+Pre-condition: Users have already logged in
+
+Steps:
+- Fill in appoinment's information
+- Click on appointment's button
+
+Expected results:
+Appointment Confirmation page is displayed",,2023-03-03 15:51:21,2023-03-03 15:51:40,18.454s,PASSED
+Start listener action : enableSauceLabs,Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:21,0.001s,PASSED
+"comment(""Story: Book an appointment"")",Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:21,0.002s,PASSED
+"comment(""Given that the user has logged into their account"")",Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:21,0.002s,PASSED
+openBrowser(G_SiteURL),Chrome 110.0.0.0,,,2023-03-03 15:51:21,2023-03-03 15:51:27,5.659s,PASSED
+"callTestCase(findTestCase(""Common Test Cases/Login""), [""Username"":""John Doe"", ""Password"":""ThisIsNotAPassword""], STOP_ON_FAILURE)",Chrome 110.0.0.0,,,2023-03-03 15:51:27,2023-03-03 15:51:32,4.596s,PASSED
+"comment(""And Appointment page is displayed"")",Chrome 110.0.0.0,,,2023-03-03 15:51:32,2023-03-03 15:51:32,0.001s,PASSED
+if (true),Chrome 110.0.0.0,,,2023-03-03 15:51:32,2023-03-03 15:51:35,3.639s,PASSED
+"comment(""When he fills in valid information in Appointment page"")",Chrome 110.0.0.0,,,2023-03-03 15:51:35,2023-03-03 15:51:35,0.002s,PASSED
+"click(findTestObject(""Page_CuraAppointment/btn_BookAppointment""))",Chrome 110.0.0.0,,,2023-03-03 15:51:35,2023-03-03 15:51:36,0.848s,PASSED
+"verifyTextPresent(""Appointment Confirmation"", false)",Chrome 110.0.0.0,,,2023-03-03 15:51:36,2023-03-03 15:51:37,0.502s,PASSED
+"comment(""Then he should be able to book a new appointment"")",Chrome 110.0.0.0,,,2023-03-03 15:51:37,2023-03-03 15:51:37,0.001s,PASSED
+if (true),Chrome 110.0.0.0,,,2023-03-03 15:51:37,2023-03-03 15:51:39,2.117s,PASSED
+takeScreenshot(),Chrome 110.0.0.0,,,2023-03-03 15:51:39,2023-03-03 15:51:40,0.774s,PASSED
+closeBrowser(),Chrome 110.0.0.0,,,2023-03-03 15:51:40,2023-03-03 15:51:40,0.175s,PASSED
+Start listener action : autoUpdateJobStatus,Chrome 110.0.0.0,,,2023-03-03 15:51:40,2023-03-03 15:51:40,0.001s,PASSED
