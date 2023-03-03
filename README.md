@@ -1,1 +1,1 @@
-# -katalon-aws-codebuild-sample
+# katalon-aws-codebuild-sample
