@@ -26,10 +26,7 @@ You must be able to integrate your codebuild with Katalon TestOps to generate re
 * To create an AWS codebuild, perform the following steps:
 * Sign in to Amazon Web Services, search for AWS CodeBuild, and go to the CodeBuild service.
 
-
-
 The CodeBuild page appears.
-
 
 
 # Click Create build project.
