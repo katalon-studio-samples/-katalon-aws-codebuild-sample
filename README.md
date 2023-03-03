@@ -7,6 +7,7 @@ To integrate these two applications, first we will store all Katalon automation 
 If you are currently using AWS CodePipeline and would like to automate your CD pipeline, or if you are an existing Katalon user planning to adopt AWS CodePipeline for build/release automation, the blog will provide all the details you will need to make the integration work.
 
 # Requirements
+
 * Create a project within katalon studio and Record Test and Commit Source Code into source code management(CodeCommit/Github etc).
 * buildspec.yml: The buildspec file is YAML-formatted and is used to store build commands. You can get this file from our github repository with our sample project: Katalon Studio Samples.
 
@@ -19,9 +20,11 @@ If you are currently using AWS CodePipeline and would like to automate your CD p
 * Define environment variables.
 * Katalon license: You must have a valid license to run Katalon tests. For more information on licenses, refer to Katalon license types.
 You must be able to integrate your codebuild with Katalon TestOps to generate reports. You must also be connected to a repository (for example GitHub) so that you can push your codebuild project. Refer to TestOps Integration for more details.
+
 # Create an AWS codebuild
-To create an AWS codebuild, perform the following steps:
-Sign in to Amazon Web Services, search for AWS CodeBuild, and go to the CodeBuild service.
+
+* To create an AWS codebuild, perform the following steps:
+* Sign in to Amazon Web Services, search for AWS CodeBuild, and go to the CodeBuild service.
 
 
 
